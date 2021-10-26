@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: testScriptsJunit.TestMathutil
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.008 s <<< FAILURE! - in testScriptsJunit.TestMathutil
+testScriptsJunit.TestMathutil.testDivide()  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: divide by zero should throw ==> Unexpected exception type thrown ==> expected: <java.lang.NullPointerException> but was: <java.lang.ArithmeticException>
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:65)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:41)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:2936)
+	at testScriptsJunit.TestMathutil.testDivide(TestMathutil.java:39)
+Caused by: java.lang.ArithmeticException: / by zero
+	at junitScripts.Mathutil.divide(Mathutil.java:20)
+	at testScriptsJunit.TestMathutil.lambda$0(TestMathutil.java:39)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:55)
+	... 16 more
+
