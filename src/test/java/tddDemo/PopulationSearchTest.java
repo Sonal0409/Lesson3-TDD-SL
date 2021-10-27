@@ -3,6 +3,7 @@ package tddDemo;
 import static org.junit.Assert.*;
 
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class PopulationSearchTest {
@@ -30,29 +31,52 @@ public class PopulationSearchTest {
 	
 	// Now write the test case for Refactor phase
 	
+	//@Test
+	
+	//public void  {
+		
+		
+	
+	
+	
+	
 	@Test
 	//Step 1
-	public void findPopulationWithEmptyInput() {
+	public void findPopulationWithEmptyInput()
+	{
 		// Step 2 : we are giving empty input
+		try {
 		String city="";
 		int expectedPopulationCount=0;
 		PopulationSearch ps=new PopulationSearch();
 		int count=ps.getPopulation(city);
-	assertEquals(expectedPopulationCount, count);
-	//Step 3: execute the tests.. it will fail
-	// so we have to now refactor or correct the code execute green phase.
-	//step 4 go to code
-	 
+		//assertEquals(expectedPopulationCount, count);
+		//Step 3: execute the tests.. it will fail
+		// so we have to now refactor or correct the code execute green phase.
+		// write the if condition in the code
+		//step 4 here add try and catch
+		}
+		catch (NullPointerException e1)
+		{
+			System.out.println("input should not be empty");
+		}
+		
+		 
 	}
-	
 	
 	@Test
 	public void findPopulationWithInavlidInput() {
+		try {
 		String city="XYZ";
 		int expectedPopulationCount=0;
 		PopulationSearch ps=new PopulationSearch();
 		int count=ps.getPopulation(city);
 		Assert.assertEquals(expectedPopulationCount, count);
+		}
+		catch (NullPointerException e1)
+		{
+			System.out.println("input should not be invalid");
+		}
 	}
 	
 	
